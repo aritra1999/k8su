@@ -11,6 +11,7 @@
 		"version": "0.1.0"
 	},
 	"tauri": {
+		"macOSPrivateApi": true,
 		"allowlist": {
 			"all": false
 		},
@@ -56,10 +57,10 @@
 		"windows": [
 			{
 				"fullscreen": false,
-				"height": 600,
+				"height": 1000,
+				"width": 1500,
 				"resizable": true,
-				"title": "k8su",
-				"width": 800
+				"title": "k8su"
 			}
 		]
 	}
