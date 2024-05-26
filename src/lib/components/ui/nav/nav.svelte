@@ -52,7 +52,7 @@
 	};
 </script>
 
-<nav class="border-r h-screen w-16 flex flex-col justify-between py-6">
+<nav class=" h-screen w-16 flex flex-col justify-between py-6">
 	{#key $page.url.pathname}
 		{#each navbarItemSections as navbarItems}
 			<ul class="space-y-4">
