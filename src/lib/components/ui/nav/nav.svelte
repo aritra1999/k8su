@@ -52,26 +52,28 @@
 	};
 </script>
 
-<nav class=" h-screen w-16 flex flex-col justify-between py-6">
-	{#key $page.url.pathname}
-		{#each navbarItemSections as navbarItems}
-			<ul class="space-y-4">
-				{#each navbarItems as navbarItem}
-					<li class="flex flex-col items-center">
-						{#if navbarItem.name === 'Theme Toggle'}
-							<ThemeToggle />
-						{:else}
-							<Button
-								variant={isSelected(navbarItem.link) ? 'default' : 'ghost'}
-								size="icon"
-								href={navbarItem.link}
-							>
-								<svelte:component this={navbarItem.icon} class="w-4 h-4" />
-							</Button>
-						{/if}
-					</li>
-				{/each}
-			</ul>
-		{/each}
-	{/key}
+<nav class="h-screen w-16">
+	<div class="flex h-full flex-col justify-between py-4 border-r">
+		{#key $page.url.pathname}
+			{#each navbarItemSections as navbarItems}
+				<ul class="space-y-4">
+					{#each navbarItems as navbarItem}
+						<li class="flex flex-col items-center">
+							{#if navbarItem.name === 'Theme Toggle'}
+								<ThemeToggle />
+							{:else}
+								<Button
+									variant={isSelected(navbarItem.link) ? 'default' : 'ghost'}
+									size="icon"
+									href={navbarItem.link}
+								>
+									<svelte:component this={navbarItem.icon} class="w-4 h-4" />
+								</Button>
+							{/if}
+						</li>
+					{/each}
+				</ul>
+			{/each}
+		{/key}
+	</div>
 </nav>
